@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BBGGTCCC_A4" pageWidth="595" pageHeight="842" columnWidth="454" leftMargin="85" rightMargin="56" topMargin="56" bottomMargin="56" uuid="c5c883b7-9e02-4848-b081-7225ac5d1d8f">
+	<property name="com.jaspersoft.studio.unit." value="cm"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="cm"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="numberVesselDocked" class="java.lang.String"/>
+	<parameter name="nameVPort" class="java.lang.String"/>
+	<parameter name="addressVPort" class="java.lang.String"/>
+	<parameter name="nameShipOwer" class="java.lang.String"/>
+	<parameter name="registrationCode" class="java.lang.String"/>
+	<parameter name="licenseCode" class="java.lang.String"/>
+	<parameter name="dateExpiration" class="java.util.Date"/>
+	<parameter name="supervisorOne" class="java.lang.String"/>
+	<parameter name="supervisorTwo" class="java.lang.String"/>
+	<parameter name="positionOne" class="java.lang.String"/>
+	<parameter name="positionTwo" class="java.lang.String"/>
+	<parameter name="nameVessel" class="java.lang.String"/>
+	<parameter name="fishery" class="java.lang.String"/>
+	<parameter name="addressShipOwer" class="java.lang.String"/>
+	<parameter name="addressCaptain" class="java.lang.String"/>
+	<parameter name="nameCaptain" class="java.lang.String"/>
+	<parameter name="dateNotification" class="java.util.Date"/>
+	<parameter name="datedDocked" class="java.util.Date"/>
+	<parameter name="isBC_KTTS" class="java.lang.Boolean"/>
+	<parameter name="isNK_KTTM" class="java.lang.Boolean"/>
+	<parameter name="phoneVPort" class="java.lang.String"/>
+	<field name="aquaticProductName" class="java.lang.String"/>
+	<field name="amountTT" class="java.lang.Double"/>
+	<field name="amountDK" class="java.lang.Double"/>
+	<variable name="sumTT" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{amountTT}!=null?$F{amountTT}:0]]></variableExpression>
+	</variable>
+	<variable name="sumDK" class="java.lang.Double" calculation="Sum">
+		<variableExpression><![CDATA[$F{amountDK}!=null?$F{amountDK}:0]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="392" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="60" width="454" height="19" uuid="218a2829-ad86-4e12-9524-66fdd010fba8"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[BIÊN BẢN GIÁM SÁT TÀU CÁ CẬP CẢNG]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="0" y="0" width="449" height="41" uuid="6cdf87a2-a1cd-48c7-b1d3-71c061bdfe2a"/>
+				<staticText>
+					<reportElement x="184" y="0" width="265" height="19" uuid="605bfa7e-9e53-4c25-8321-fca3c452bdc5"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="184" y="18" width="265" height="22" uuid="b49a6058-125f-4296-8c2d-65a3ac138c37"/>
+					<box>
+						<pen lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" size="13" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Độc lập - Tự do - Hạnh phúc]]></text>
+				</staticText>
+				<line>
+					<reportElement x="262" y="41" width="109" height="1" uuid="e9e6c0d8-0f36-4d0c-a8a1-a0f71afbdfe7"/>
+				</line>
+				<staticText>
+					<reportElement x="0" y="18" width="183" height="22" uuid="63704c12-58a6-410c-97ae-c8b993db0a53"/>
+					<box>
+						<pen lineStyle="Solid"/>
+					</box>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" size="13" isBold="true"/>
+					</textElement>
+					<text><![CDATA[BQL CẢNG CÁ TIỀN GIANG]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="0" width="184" height="19" uuid="6baad696-ddc9-4541-8e5d-3d75ad9b5193"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[SỞ NÔNG NGHIỆP VÀ PTNT]]></text>
+				</staticText>
+				<line>
+					<reportElement x="50" y="42" width="80" height="1" uuid="f2736229-50b4-4b6b-aeed-09de56f5b353"/>
+				</line>
+			</frame>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="79" width="454" height="20" uuid="caa03b6d-82f9-434b-8710-87f348237b84"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Số: " + $P{numberVesselDocked}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="0" y="100" width="454" height="19" uuid="58ff559a-81d7-4541-8029-6ff61f451274"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Tên cảng cá: "+ ($P{nameVPort}!=null?$P{nameVPort}:"") + " ; " + "Địa chỉ: " + ($P{addressVPort}!=null?$P{addressVPort}:"")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="119" width="454" height="20" uuid="d541d714-d53d-4535-b524-7918bda47bed"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["ĐT: " + ($P{phoneVPort}!=null?$P{phoneVPort}:"")]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="0" y="275" width="454" height="35" uuid="88f73ebe-7dfe-4606-a6b9-fdf0aa214f5f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Họ và tên chủ tàu: " + ($P{nameShipOwer}!=null?$P{nameShipOwer}:"") + " - Địa chỉ: " + ($P{addressShipOwer}!=null?$P{addressShipOwer}:"")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="221" y="218" width="231" height="19" uuid="9daf4bec-b35d-4336-ab86-2fd8acaa89b0"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" ; Số đăng ký của tàu: "+ ($P{registrationCode}!=null?$P{registrationCode}:"")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="237" width="453" height="19" uuid="925860f6-675b-44db-82a7-2ed4c02f7420"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Giấy phép khai thác: "+($P{licenseCode}!=null?$P{licenseCode}:"") +", "+"hết hạn: "+ "ngày " +DAY($P{dateExpiration})+" tháng "+MONTH($P{dateExpiration})+" năm "+YEAR($P{dateExpiration})]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="330" width="454" height="21" uuid="97411d66-a47c-478f-99d5-a34cbb4c02b9"/>
+				<textElement markup="styled">
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<style isBold='true'>"+"3. Thông báo cập cảng: "  + "</style>" + "Lúc " +HOUR($P{dateNotification}) + " giờ " +MINUTE($P{dateNotification}) + " phút," +" ngày " + DAY($P{dateNotification}) + " tháng " + MONTH($P{dateNotification}) + " năm " + YEAR($P{dateNotification})]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" isBlankWhenNull="true">
+				<reportElement x="0" y="372" width="454" height="19" uuid="0628635d-5917-4a9a-b85d-c88227736b34"/>
+				<textElement markup="styled">
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<style isBold='true'>"+"5. Giám sát sản lượng thủy sản bốc dỡ: "  + "</style>"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="140" width="454" height="19" uuid="652a7594-c0d2-49bc-93da-75fcff9441cd"/>
+				<textElement markup="styled">
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<style isBold='true'>"+"1. Đơn vị giám sát: "  + "</style>"  +($P{nameVPort}!=null?$P{nameVPort}:"")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="179" width="250" height="19" uuid="d87bce60-dc18-49cc-adfb-ff8cbfdf5c93"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Người giám sát: " + ($P{supervisorTwo}!=null?$P{supervisorTwo}:"")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="160" width="250" height="19" uuid="f4d4a313-315b-4dd3-a373-91ae305db6b4"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Người giám sát: " + ($P{supervisorOne}!=null?$P{supervisorOne}:"")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="250" y="160" width="203" height="19" uuid="53c480b4-8aa1-4492-8c44-f55e9f6642b7"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" Chức vụ: " + ($P{positionOne}!=null?$P{positionOne}:"")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="250" y="180" width="204" height="19" uuid="c966fd2c-afb9-484b-bc69-8d87f05d9173"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" Chức vụ: " + ($P{positionTwo}!=null?$P{positionTwo}:"")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="199" width="454" height="19" uuid="f40581ca-2506-45c2-8d7c-aff3de2236c5"/>
+				<textElement markup="styled">
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<style isBold='true'>"+"2. Giám sát tàu cá: "  + "</style>"]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="218" width="218" height="19" uuid="e28fbd50-4620-41a0-8b84-b04458f9bb65"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Tên tàu: " + ($P{nameVessel}!=null?$P{nameVessel}:"")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="256" width="454" height="19" uuid="0be73756-e92c-4728-82c1-13b64a0d4efb"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Loại nghề khai thác thủy sản: " + ($P{fishery}!=null?$P{fishery}:"")]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement x="0" y="310" width="451" height="19" uuid="3c4f10e5-17c5-497b-8555-27db830b0579"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Họ và tên thuyền trưởng: " + ($P{nameCaptain}!=null?$P{nameCaptain}:"") + " - Địa chỉ: " + ($P{addressCaptain}!=null?$P{addressCaptain}:"")]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="351" width="454" height="21" uuid="bf2000b1-463b-4cd6-a49c-b2a7adcaed38"/>
+				<textElement markup="styled">
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA["<style isBold='true'>"+"4. Thời gian cập cảng: "  + "</style>" + "Lúc " +HOUR($P{datedDocked}) + " giờ " +MINUTE($P{datedDocked}) + " phút," + " ngày " + DAY($P{datedDocked}) + " tháng " + MONTH($P{datedDocked}) + " năm " + YEAR($P{datedDocked})]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="30" height="20" uuid="f8a0e422-3dfd-4797-9453-2f127b08de14"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<text><![CDATA[TT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="0" width="140" height="20" uuid="dcdd38f7-9bc8-4ee6-aae3-87a6c296f90a"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<text><![CDATA[Tên loài thủy sản]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="0" width="124" height="20" uuid="1247b27c-0c68-408b-9176-23352accd917"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<text><![CDATA[Sản lượng thực tế (kg)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="0" width="160" height="20" uuid="c404b660-2c33-4be9-848d-b1db58d318e6"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<text><![CDATA[Sản lượng theo báo cáo (kg)]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="30" y="0" width="140" height="20" uuid="050098c6-48b2-4632-aa22-7cbaed80aa30">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="afeba849-4f63-4177-8093-6dd1ad704ad9"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{aquaticProductName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="330" y="0" width="124" height="20" uuid="4c230be0-eef8-4cfe-8368-9019b8d2597b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="6d5c3211-e808-4da9-ae6e-3d567c99875f"/>
+					<property name="com.jaspersoft.studio.unit.spacingAfter" value="cm"/>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{amountTT}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="30" height="20" uuid="b2d3d4bf-7458-4f9a-b0dd-de2a402bc1ee"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="170" y="0" width="160" height="20" uuid="678c99f1-e6be-413a-a688-f72558b184af">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="afeba849-4f63-4177-8093-6dd1ad704ad9"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{amountDK}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<summary>
+		<band height="120" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="30" width="454" height="20" uuid="3d6adcaf-274b-4787-9eba-37cade6913ea"/>
+				<textElement>
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["6. Nộp nhật ký/ báo cáo khai thác: "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="279" y="80" width="174" height="19" uuid="e167d178-7c2d-424b-9b92-d6da67ee6a12"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="13" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Đại diện đơn vị giám sát]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="100" width="174" height="20" uuid="27480341-c374-4920-9d2f-9bbec9153e72"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="13" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[(ký và ghi rõ họ, tên)
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="80" width="140" height="19" uuid="91851fa8-c38a-4caf-85db-8adc9acfbc90"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="13" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Chủ tàu/thuyền trưởng]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="100" width="139" height="20" uuid="8a14b516-2302-4af3-ae0f-b77ed5cc098f"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="13" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[(ký và ghi rõ họ, tên)
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="0" width="140" height="20" isRemoveLineWhenBlank="true" uuid="17350fcf-aaa2-4f37-bced-0de7bb5c995b"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tổng cộng:]]></text>
+			</staticText>
+			<textField evaluationTime="Report" isBlankWhenNull="true">
+				<reportElement x="170" y="0" width="160" height="20" uuid="7753a57e-21bd-4464-bf66-1c71fbfae3b5"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{sumDK}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="0" width="30" height="20" uuid="acc34a60-c174-4721-934d-a8edb3be61f8"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<textField evaluationTime="Report" isBlankWhenNull="true">
+				<reportElement x="330" y="0" width="124" height="20" uuid="80606ed7-c4e9-4326-8730-351d340b7462"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{sumTT}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" isBlankWhenNull="true">
+				<reportElement x="13" y="50" width="164" height="20" uuid="7bb5045a-f79a-4f16-97ab-67c3e6774e96"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" Báo cáo khai thác thủy sản"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" isBlankWhenNull="true">
+				<reportElement x="210" y="50" width="164" height="20" uuid="6f14a746-4479-48dc-86ae-3fa778227642"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" Nhật ký khai thác thu mua"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" isBlankWhenNull="true">
+				<reportElement x="177" y="50" width="32" height="20" uuid="a039f644-dbdd-4f2d-a3fe-1a834c0f0f71"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{isBC_KTTS} == true ? "X": "")]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" isBlankWhenNull="true">
+				<reportElement x="374" y="50" width="38" height="20" uuid="2be33d97-e5fa-4808-ae2e-eb3b77a93a7f"/>
+				<box>
+					<pen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Times New Roman" size="13"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($P{isNK_KTTM} == true ? "X": "")]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="140" y="80" width="139" height="19" uuid="e16eba2a-5aa3-4c3d-b024-2648461af568"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="13" isBold="true" isItalic="false"/>
+				</textElement>
+				<text><![CDATA[Người giám sát]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="100" width="139" height="20" uuid="95b23e9a-3f87-4259-8aba-e8c658430f22"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="13" isBold="false" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[(ký và ghi rõ họ, tên)
+]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>
